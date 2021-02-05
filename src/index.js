@@ -13,7 +13,9 @@ class App extends React.Component {
       position => {
         this.setState({lat: position.coords.latitude })
       },
-      err => console.log(err)
+      err => {
+        this.setState({errorMessage: err.message})
+      }
     );
   }
 
@@ -27,6 +29,14 @@ class App extends React.Component {
     }
 
     return <div>Loading...</div>;
+  }
+
+  componentDidMount() {
+    console.log('My component was render to the screen');
+  }
+
+  componentDidUpdate() {
+    console.log('My component was just update - it rerendered!')
   }
 
 }
