@@ -1,7 +1,12 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
-const app = () => {
-  return <div>App</div>;
-}
+const App = () => {
+  return (
+    <div className="ui container">
+      <SearchBar />
+    </div>
+  );
+};
 
-export default app;
+export default App;
